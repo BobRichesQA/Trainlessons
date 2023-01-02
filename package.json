@@ -1,0 +1,62 @@
+{
+  "name": "gulp-bundler",
+  "version": "1.0.1",
+  "description": "HTML Layout Bundler",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "start": "gulp",
+    "build": "gulp build",
+    "format": "prettier --write 'src/**/*.{cjs,js,jsx,ts,tsx,json,css,scss}'",
+    "lint:js": "eslint . --quiet --ext cjs,js,jsx,ts,tsx",
+    "lint:css": "stylelint --fix 'src/**/*.{css,scss}'"
+  },
+  "lint-staged": {
+    "src/**/*.{cjs,js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "src/**/*.{css,scss}": [
+      "prettier --write",
+      "stylelint"
+    ]
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonlimar/gulp-bundler.git"
+  },
+  "keywords": [
+    "Gulp",
+    "Bundler",
+    "Builder"
+  ],
+  "author": "Anton Limar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antonlimar/gulp-bundler/issues"
+  },
+  "homepage": "https://github.com/antonlimar/gulp-bundler#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "del": "^7.0.0",
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-include": "^2.4.1",
+    "gulp-sass": "^5.1.0",
+    "husky": "^8.0.2",
+    "prettier": "^2.8.1",
+    "sass": "^1.57.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-scss": "^4.3.0"
+  }
+}
